@@ -44,16 +44,29 @@ class NewUnit : public UnitCRTP<NewUnit> {
     using UnitCRTP<NewUnit>::UnitCRTP;
 };
 
-template<> const int UnitCRTP<NewUnit>::_coins = 100;                                                 // количество монет для создания юнита
-template<> const int UnitCRTP<NewUnit>::_people = 1;                                                  // количество людей для создания юнита
-template<> const Resources* UnitCRTP<NewUnit>::_resources = new Resources(std::vector<int>({0, 0}));  // необходимые ресурсы для создания юнита
-template<> const int UnitCRTP<NewUnit>::_dailyNeeds = 10;                                             // количество монет, которые ежедневно нужно платить юниту
-template<> const int UnitCRTP<NewUnit>::_initialHealth = 100;                                         // изначальное здоровье юнита
-template<> const int UnitCRTP<NewUnit>::_outDamage = 70;                                              // наносимый урон другому юниту
-template<> const int UnitCRTP<NewUnit>::_inDamage = 25;                                               // ответный урон
-template<> const float UnitCRTP<NewUnit>::_moneylessDamage = 0.20;                                    // урон за каджую недополученную монету ежедневного финансирования
-template<> const int UnitCRTP<NewUnit>::_towerAttack = 40;                                            // наносимый урон базе
-template<> const std::string UnitCRTP<NewUnit>::_unitClass = "newUnit";                               // имя класса юнитов
-template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "new unit description";                   // описание класса юнитов
-StoreUnit archerUnitStored(new NewUnit());                                                            // добавление юнита в список доступных для покупки
+// количество монет для создания юнита
+template<> const int UnitCRTP<NewUnit>::_coins = 100;
+// количество людей для создания юнита
+template<> const int UnitCRTP<NewUnit>::_people = 1;
+// необходимые ресурсы для создания юнита
+template<> const Resources* UnitCRTP<NewUnit>::_resources = new Resources(std::vector<int>({0, 0}));
+// количество монет, которые ежедневно нужно платить юниту
+template<> const int UnitCRTP<NewUnit>::_dailyNeeds = 10;
+// изначальное здоровье юнита
+template<> const int UnitCRTP<NewUnit>::_initialHealth = 100;
+// наносимый урон другому юниту
+template<> const int UnitCRTP<NewUnit>::_outDamage = 70;
+// ответный урон
+template<> const int UnitCRTP<NewUnit>::_inDamage = 25;
+// урон за каджую недополученную монету ежедневного финансирования
+template<> const float UnitCRTP<NewUnit>::_moneylessDamage = 0.20;
+// наносимый урон базе
+template<> const int UnitCRTP<NewUnit>::_towerAttack = 40;
+// имя класса юнитов
+template<> const std::string UnitCRTP<NewUnit>::_unitClass = "newUnit";
+// описание класса юнитов
+template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "new unit description";
+
+// добавление юнита в список доступных для покупки
+StoreUnit archerUnitStored(new NewUnit());
 ```
