@@ -279,6 +279,7 @@ public:
         for (std::string line; getline( input, line );) {
             player->notify(line);
         }
+        input.close();
     }
 
     ~Help() = default;
