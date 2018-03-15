@@ -11,4 +11,9 @@
 
 ## Настройка
 #### Ресурсы
-Настройте типы ресурсов в `resourceList.cpp` и начальные значения для игрока в `playerCalc.cpp`.
+Настройте типы ресурсов в `resourceList.cpp`, добавив новый ресурс:
+```c++
+ResourceAdder newResource("newResourceName", 1000);
+```
+и начальные значения для игрока в `playerCalc.cpp`
+
