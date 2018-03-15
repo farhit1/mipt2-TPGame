@@ -62,8 +62,6 @@ public:
         attackFrom->health = std::max(0, attackFrom->health - attackTo->inDamage());
         attackFrom->thisTurnUsed = true;
     }
-
-    ~Attack() = default;
 };
 
 StoreAction attackActionStored(new Attack());
@@ -127,8 +125,6 @@ public:
         attackTo->tower = std::max(0, attackTo->tower - attackFrom->towerAttack());
         attackFrom->thisTurnUsed = true;
     }
-
-    ~AttackTower() = default;
 };
 
 StoreAction attackTowerActionStored(new AttackTower());
@@ -174,8 +170,6 @@ public:
         *player->resources -= *unit->resources();
         player->units.push_back(unit->clone(player));
     }
-
-    ~PurchaseUnit() = default;
 };
 
 StoreAction purchaseUnitActionStored(new PurchaseUnit());
@@ -252,8 +246,6 @@ public:
     void process() {
         player->tax = newTax;
     }
-
-    ~SetTax() = default;
 };
 
 StoreAction setTaxActionStored(new SetTax());
@@ -281,8 +273,6 @@ public:
         }
         input.close();
     }
-
-    ~Help() = default;
 };
 
 StoreAction helpActionStored(new Help());
@@ -348,8 +338,6 @@ public:
             if (!unit->isDead())
                 to->notify("  [" + usedTurn(unit) + "] " + unit->info());
     }
-
-    ~Info() = default;
 };
 
 StoreAction infoActionStored(new Info());
@@ -389,8 +377,6 @@ public:
         to->notify("  Money:      " + std::to_string(about->coins()));
         to->notify("  Resources:  " + about->resources()->toString());
     }
-
-    ~UnitInfo() = default;
 };
 
 StoreAction unitInfoActionStored(new UnitInfo());
@@ -434,8 +420,6 @@ public:
         player->coins -= unit->healingCost();
         unit->health = unit->initialHealth();
     }
-
-    ~Heal() = default;
 };
 
 StoreAction healActionStored(new Heal());
@@ -461,8 +445,6 @@ public:
         for (auto &i : unitList)
             player->notify(i.first);
     }
-
-    ~Units() = default;
 };
 
 StoreAction unitsActionStored(new Units());
@@ -493,8 +475,6 @@ public:
         }
         player->notify(std::to_string(Resources::costs[pos]));
     }
-
-    ~ResourceCost() = default;
 };
 
 StoreAction resourceCostActionStored(new ResourceCost());
