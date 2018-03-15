@@ -53,7 +53,7 @@ template<> const int UnitCRTP<NewUnit>::_outDamage = 70;                        
 template<> const int UnitCRTP<NewUnit>::_inDamage = 25;                                               // ответный урон
 template<> const float UnitCRTP<NewUnit>::_moneylessDamage = 0.20;                                    // урон за каджую недополученную монету ежедневного финансирования
 template<> const int UnitCRTP<NewUnit>::_towerAttack = 40;                                            // наносимый урон базе
-template<> const std::string UnitCRTP<NewUnit>::_unitClass = "archer";                                // имя класса юнитов
-template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "Man with a bow";                         // описание класса юнитов
+template<> const std::string UnitCRTP<NewUnit>::_unitClass = "newUnit";                               // имя класса юнитов
+template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "new unit description";                   // описание класса юнитов
 StoreUnit archerUnitStored(new NewUnit());                                                            // добавление юнита в список доступных для покупки
 ```
