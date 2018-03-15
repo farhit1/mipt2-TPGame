@@ -16,10 +16,24 @@
 ResourceAdder newResource("newResourceName", 1000);
 ```
 и начальные значения для игрока в `playerCalc.cpp`
-### Ресурсы
-Настройте типы ресурсов в `resourceList.cpp`, добавив новый ресурс:
+### Действия
+Добавьте новое действие в `availableActions.cpp`:
 ```c++
-ResourceAdder newResource("newResourceName", 1000);
+class NewAction : public Action {
+    using Action::Action;
+public:
+    // конструктор запроса
+    NewAction(...);
+
+    // парсер, возвращающий new NewAction(...), если запрос удалось распарсить, иначе nullptr
+    Action *parseQuery(Player *, const std::vector<std::string> &);
+
+    // обработка действия
+    void process();
+
+    ~NewAction() = default;
+};
+
+StoreAction newActionStored(new NewAction()); // добавление действия в список доступных действий
 ```
-и начальные значения для игрока в `playerCalc.cpp`
 
