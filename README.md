@@ -34,7 +34,8 @@ public:
     ~NewAction() = default;
 };
 
-StoreAction newActionStored(new NewAction()); // добавление действия в список доступных действий
+// добавление действия в список доступных действий
+StoreAction newActionStored(new NewAction());
 ```
 ### Юниты
 Добавьте новый класс юнитов в `availableUnits.cpp`:
