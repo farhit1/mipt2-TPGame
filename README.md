@@ -68,3 +68,7 @@ template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "new unit descriptio
 // добавление юнита в список доступных для покупки
 StoreUnit archerUnitStored(new NewUnit());
 ```
+
+## Скриншоты
+
+![Скриншот #1](https://github.com/farhit1/mipt2-TPGame/blob/master/screenshots/1.png)
