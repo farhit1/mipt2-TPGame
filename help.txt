@@ -1,0 +1,48 @@
+Attack unit:
+    Command: attack [attacker unit name] [accepting attack unit name]
+    Unit->unit attack
+    You should be owner of attacker unit
+    You can't attack yourself
+    Both units shouldn't be dead
+
+Attack tower:
+    Command: tower [attacker unit name] [accepting attack player name]
+    Unit->player attack
+    You should be owner of attacker unit
+    You can't attack yourself
+    Attacker unit shouldn't be dead
+    Accepting attack player shouldn't be dead
+    Accepting attack player shouldn't have alive units
+
+Purchase:
+    Unit:
+        Command: buy unit [unit class name]
+        You should have enough money and resources to buy unit
+    Resource:
+        Command: buy resource [resource name]
+        You should have enough money to buy resource
+
+Tax:
+    Command to set tax: tax [new value of tax]
+    Every day each inhabitant pays tax coins to you
+    [NOTE] Bigger tax -> less population
+
+Information:
+    Player:
+        Command 1: info
+        Command 2: info [player name]
+        Prints information about player
+        You can use units marked as [+]
+    Unit class:
+        Command: unit [unit class name]
+        Prints information about unit class
+    Unit types:
+        Command: units
+        Prints available unit classes
+    Resource:
+        Command: resource [resource name]
+        Prints cost of resource
+
+End move:
+    Command: end
+    Ends your move
