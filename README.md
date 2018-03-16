@@ -75,4 +75,4 @@ StoreUnit archerUnitStored(new NewUnit());
 ## TODO
 - [ ] Поправить `unit.h`
 - [ ] Сделать объявление новых классов юнитов более лаконичным
-- [ ] Сделать autoplayer
+- [ ] Сделать AutoPlayer
