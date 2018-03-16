@@ -61,7 +61,7 @@ template<> const float UnitCRTP<NewUnit>::_moneylessDamage = 0.20;
 // наносимый урон базе
 template<> const int UnitCRTP<NewUnit>::_towerAttack = 40;
 // имя класса юнитов
-template<> const std::string UnitCRTP<NewUnit>::_unitClass = "newUnit";
+template<> const std::string UnitCRTP<NewUnit>::_unitClass = "newunit";
 // описание класса юнитов
 template<> const std::string UnitCRTP<NewUnit>::_unitDesc = "new unit description";
 
