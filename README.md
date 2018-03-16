@@ -79,3 +79,4 @@ StoreUnit archerUnitStored(new NewUnit());
 - [ ] Разобраться с деструкторами
 - [ ] Разобраться с модификаторами доступа
 - [ ] Поместить все в один namespace
+- [ ] GUI
