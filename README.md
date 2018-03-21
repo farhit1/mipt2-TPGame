@@ -77,12 +77,3 @@ StoreUnit archerUnitStored(new NewUnit());
 
 ## Скриншоты
 ![Скриншот 1](https://github.com/farhit1/mipt2-TPGame/blob/master/screenshots/1.png)
-
-## TODO
-- [ ] Поправить `unit.h`
-- [ ] Сделать объявление новых классов юнитов более лаконичным
-- [ ] Сделать AutoPlayer
-- [ ] Разобраться с деструкторами
-- [ ] Разобраться с модификаторами доступа
-- [ ] Поместить все в один namespace
-- [ ] GUI
